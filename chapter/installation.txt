@@ -21,11 +21,46 @@ Installing Ramaze should be very simple on most systems. Following are several i
 
 === On OSX
 
-(forthcoming)
+Installing Ramaze is fairly straight forward. Mac OS X ships with Ruby 1.8 by default and this should be enough to run Ramaze and most other Ruby applications.
+It's recommended that you use http://rvm.beginrescueend.com[RVM] to install a more up to date version of Ruby and all required Gems. 
+
+For example, I'm running Mac OS X 10.6 which ships with Ruby 1.8. In order to keep things a bit more organized I installed Ruby 1.9.2 using RVM and use that for developing all my Ruby projects. 
+Explaining how RVM works is out of the scope of this guide so I recommened you visit it's website and read the guides.
+
+RVM or plain Ruby, in the end it comes down to two steps. First make sure Rubygems is installed. Because we're on a Mac we don't have access to a package manager such as apt, this means
+we'll have to install Rubygems by downloading the package ourselves. Assuming you have downloaded the most recent version of Rubygems and opened the directory in the Terminal we can execute
+the following command to install Rubygems:
+
+[source,ruby]
+--------------------------------------------------------------------------------
+$ ruby setup.rb
+--------------------------------------------------------------------------------
+
+In some cases you may need super-user rights, in that case the command should be the following:
+
+[source,ruby]
+--------------------------------------------------------------------------------
+$ sudo ruby setup.rb
+--------------------------------------------------------------------------------
+
+Now that Rubygems is installed we can simply install Ramaze using the following command:
+
+[source,ruby]
+--------------------------------------------------------------------------------
+$ gem install ramaze
+--------------------------------------------------------------------------------
+
+And that's it. Rubygems is installed and so is Ramaze. From this point you can use the ramaze command.
 
 === On Linux
 
-Issue your package manager to install a package commonly called "rubygems"
+Installing Ramaze on a Linux based system is almost the same as installing it on OS X. The difference however is that many package managers already contain a version of Rubygems so usually
+you can install it without having to download the package manually. On Ubuntu we can simply issue the following command to install Rubygems:
+
+[source,ruby]
+--------------------------------------------------------------------------------
+$ apt-get install rubygems
+--------------------------------------------------------------------------------
 
 === ArchLinux
 

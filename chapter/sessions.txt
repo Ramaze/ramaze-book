@@ -1,4 +1,5 @@
 = Sessions
+
 == What are sessions
 
 The term session is used for data associated with a specific client (browser).

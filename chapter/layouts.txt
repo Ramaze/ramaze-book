@@ -98,10 +98,16 @@ end
 Additionally to this, we will need the file for the layout template to reside
 in, we'll use an identical layout as further above.
 
-[source,txt]
+[source,html]
 --------------------------------------------------------------------------------
-$ cat layout/default.xhtml
-{ #{@content} }
+<html>
+  <head>
+    <title>Ramaze Layouts</title>
+  </head>
+  <body>
+    #{@content}
+  </body>
+</html>
 --------------------------------------------------------------------------------
 
 That's just as easy, but enables you to work easier on larger layouts.
