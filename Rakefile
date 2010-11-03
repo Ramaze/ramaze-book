@@ -4,8 +4,8 @@ require 'open3'
 
 task :default => 'build:asciidoc-xhtml'
 
-JTR_TXT  = "journey_to_ramaze.txt"
-JTR_XML  = "journey_to_ramaze.xml"
+JTR_TXT  = File.expand_path("journey_to_ramaze.txt")
+JTR_XML  = File.expand_path("journey_to_ramaze.xml")
 CHAPTER_FILES = Dir['chapter/*.txt']
 SOURCE_FILES = FileList['chapter/source/**/*.rb']
 XMP_FILES = FileList['chapter/source/**/*.xmp']
@@ -45,6 +45,8 @@ namespace :build do
         "-s",
         JTR_XML,
       ]
+
+      FileUtils.cp(JTR_XML, format)
 
       sh("a2x", *opts)
 
