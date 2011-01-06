@@ -59,22 +59,22 @@ namespace :build do
 
   # the asciidoc-xhtml
 
-  jtr_scripts = File.expand_path('javascripts')
-  jtr_styles  = File.expand_path('stylesheets')
-  jtr_css = 'stylesheets/xhtml11.css'
+  #jtr_scripts = File.expand_path('javascripts')
+  #jtr_styles  = File.expand_path('stylesheets')
+  #jtr_css = 'stylesheets/xhtml11.css'
   jtr_dir = 'asciidoc-xhtml/'
   jtr_base = 'journey_to_ramaze.html'
   jtr_path = File.join(jtr_dir, jtr_base)
 
-  jtr_depends = [jtr_dir, JTR_TXT, jtr_css] + CHAPTER_FILES + XMP_FILES
+  jtr_depends = [jtr_dir, JTR_TXT] + CHAPTER_FILES + XMP_FILES
 
-  CLOBBER.include(jtr_dir, File.join(jtr_styles, '**/*.css'))
+  #CLOBBER.include(jtr_dir, File.join(jtr_styles, '**/*.css'))
 
   file(jtr_dir){ mkdir(jtr_dir) }
   file jtr_path => jtr_depends do
     sh('asciidoc',
-       '--attribute', "scriptsdir=#{jtr_scripts}",
-       '--attribute', "stylesdir=#{jtr_styles}",
+       #'--attribute', "scriptsdir=#{jtr_scripts}",
+       #'--attribute', "stylesdir=#{jtr_styles}",
        '--attribute', 'toc',
        '--backend', 'xhtml11',
        '--doctype', 'book',
