@@ -12,7 +12,7 @@
 :book-ramaze:   http://book.ramaze.net[book.ramaze.net]
 :www-ramaze:    http://ramaze.net[ramaze.net]
 :wiki-ramaze:   http://wiki.ramaze.net[wiki.ramaze.net]
-:doc-ramaze:    http://doc.ramaze.net[doc.ramaze.net]
+:doc-ramaze:    http://doc.rubyists.com/ramaze+innate/[http://doc.rubyists.com/ramaze+innate/]
 :bugs-ramaze:   http://github.com/ramaze/ramaze/issues[http://github.com/ramaze/ramaze/issues]
 :group-ramaze:  http://groups.google.com/group/ramaze[The Ramaze googlegroup mailing list]
 :github-ramaze: https://github.com/ramaze/ramaze[Ramaze on Github]
